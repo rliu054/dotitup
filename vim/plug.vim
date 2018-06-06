@@ -10,7 +10,7 @@ runtime search.vim
 runtime textobjects.vim
 runtime vim-improvements.vim
 runtime languages.vim
-runtime ruby.vim
+" runtime ruby.vim
 
 call plug#end()
 
