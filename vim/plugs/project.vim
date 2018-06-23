@@ -56,7 +56,8 @@ map <Leader>nf :NERDTreeFind<CR>
 " finds project root (usually a .git folder)
 Plug 'airblade/vim-rooter'
 
-Plug 'ludovicchabant/vim-gutentags'
+" This plugin is causing performance problems, disabling for now.
+" Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'

@@ -20,10 +20,11 @@ endif
 
 Plug 'Shougo/neoinclude.vim'
 Plug 'fszymanski/deoplete-emoji'
+Plug 'zchee/deoplete-jedi'
 let g:deoplete#enable_at_startup = 1
 
 let g:deoplete#sources = {}
-let g:deoplete#sources._ = ['neosnippet', 'emoji', 'file', 'buffer', 'tag']
+let g:deoplete#sources._ = ['jedi', 'neosnippet', 'emoji', 'file', 'buffer', 'tag']
 let deoplete#tag#cache_limit_size = 10000000
 
 imap <expr><TAB>
