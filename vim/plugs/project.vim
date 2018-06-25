@@ -57,7 +57,7 @@ map <Leader>nf :NERDTreeFind<CR>
 Plug 'airblade/vim-rooter'
 
 " This plugin is causing performance problems, disabling for now.
-" Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'

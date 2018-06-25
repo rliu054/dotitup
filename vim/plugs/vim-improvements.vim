@@ -12,6 +12,8 @@ Plug 'AndrewRadev/splitjoin.vim'
 
 " provides autocomplete
 Plug 'Shougo/deoplete.nvim'
+set completeopt-=preview  " disable preview window
+
 if !has('nvim')
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
