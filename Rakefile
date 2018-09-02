@@ -15,7 +15,7 @@ task :install do
 
   puts '-- Linking files and folders'
   link_it 'gemrc'
-  link_it 'agignore'
+  link_it 'ignore'
   Rake::Task["setup_ctags"].execute
   link_it 'zshrc'
   link_it 'tmux.conf'

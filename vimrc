@@ -12,7 +12,8 @@ endif
 
 " ---
 
-colorscheme Tomorrow-Night
+set background=dark
+colorscheme solarized8_high
 set cursorline
 
 " ---
@@ -102,9 +103,6 @@ set sidescroll=1
 " Display tabs and trailing spaces visually
 set list listchars=tab:▸\ ,trail:·
 
-" ---
-
-set background=light
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
