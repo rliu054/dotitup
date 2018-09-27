@@ -24,7 +24,7 @@ set number " displays line numbers.
 
 " ---
 
-set autoindent
+" set autoindent
 set smartindent
 set smarttab
 set shiftwidth=2
@@ -125,3 +125,38 @@ set rtp+=/usr/local/opt/fzf
 if filereadable(expand("~/.vimrc.after"))
   source ~/.vimrc.after
 endif
+
+" ====== Handle GUI paste automatically ======
+" https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
+" function! WrapForTmux(s)
+"   if !exists('$TMUX')
+"     return a:s
+"   endif
+
+"   let tmux_start = "\<Esc>Ptmux;"
+"   let tmux_end = "\<Esc>\\"
+
+"   return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+" endfunction
+
+" let &t_SI .= WrapForTmux("\<Esc>[?2004h")
+" let &t_EI .= WrapForTmux("\<Esc>[?2004l")
+
+" function! XTermPasteBegin()
+"   set pastetoggle=<Esc>[201~
+"   set paste
+"   return ""
+" endfunction
+
+" inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+"
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+    set pastetoggle=<Esc>[201~
+    set paste
+    return ""
+endfunction
