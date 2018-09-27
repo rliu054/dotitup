@@ -33,5 +33,6 @@ export EDITOR='vim'
 alias python=python3
 alias vi=vim
 alias cat=bat
+alias man=tldr
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
